@@ -17,10 +17,7 @@ print("Light Sensor Test")
 print("=================")
 apds.enableLightSensor()
 
-oval = -1
 while True:
     sleep(0.25)
     val = apds.readAmbientLight()
-    if val != oval:
-        print("AmbientLight={}".format(val))
-        oval = val
+    print("AmbientLight={}".format(val))
